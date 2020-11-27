@@ -27,12 +27,15 @@ class App extends Component {
             <Switch>
               <Route exact path="/">
                 <Home />
+                <LocationDisplay />
               </Route>
               <Route path="/about">
                 <About />
+                <LocationDisplay />
               </Route>
               <Route path="*">
                 <NoMatch />
+                <LocationDisplay />
               </Route>
             </Switch>
           </div>
