@@ -27,15 +27,12 @@ class App extends Component {
             <Switch>
               <Route exact path="/">
                 <Home />
-                <LocationDisplay />
               </Route>
               <Route path="/about">
                 <About />
-                <LocationDisplay />
               </Route>
               <Route path="*">
                 <NoMatch />
-                <LocationDisplay />
               </Route>
             </Switch>
           </div>
@@ -69,7 +66,7 @@ function NoMatch() {
   );
 }
 
-function LocationDisplay() {
+export function LocationDisplay() {
   let location = useLocation();
   return (
     <div data-testid="location-display">
